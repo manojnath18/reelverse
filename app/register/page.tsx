@@ -111,4 +111,10 @@ export default function Register() {
       {/* Google Sign Up / Sign In Button */}
       <button
         onClick={() => signIn("google")}
-        className="w-full bg-red
+        className="w-full bg-red-600 text-white py-2 rounded hover:bg-red-700"
+      >
+        Continue with Google
+      </button>
+    </div>
+  );
+}
