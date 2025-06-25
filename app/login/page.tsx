@@ -32,6 +32,7 @@ export default function Login() {
     <div className="max-w-md mx-auto">
       <h1 className="text-2xl font-bold mb-4">Login</h1>
       <form onSubmit={handleSubmit} className="space-y-4">
+        {/* Credentials inputs */}
         <div>
           <label htmlFor="email" className="block mb-1">
             Email
@@ -64,13 +65,29 @@ export default function Login() {
         >
           Login
         </button>
-        <p className="text-center mt-4">
-          Don&apos;t have an account?{" "}
-          <Link href="/register" className="text-blue-500 hover:text-blue-600">
-            Register
-          </Link>
-        </p>
       </form>
+
+      {/* Divider */}
+      <div className="flex items-center my-6">
+        <hr className="flex-grow border-gray-300" />
+        <span className="mx-4 text-gray-500">or</span>
+        <hr className="flex-grow border-gray-300" />
+      </div>
+
+      {/* Google Sign In Button */}
+      <button
+        onClick={() => signIn("google")}
+        className="w-full bg-red-600 text-white py-2 rounded hover:bg-red-700"
+      >
+        Sign in with Google
+      </button>
+
+      <p className="text-center mt-4">
+        Don&apos;t have an account?{" "}
+        <Link href="/register" className="text-blue-500 hover:text-blue-600">
+          Register
+        </Link>
+      </p>
     </div>
   );
 }

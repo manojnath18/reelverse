@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { useNotification } from "../components/Notification";
 import Link from "next/link";
+import { signIn } from "next-auth/react";
 
 export default function Register() {
   const [email, setEmail] = useState("");
@@ -99,6 +100,15 @@ export default function Register() {
           </Link>
         </p>
       </form>
-    </div>
-  );
-}
+
+      {/* Divider */}
+      <div className="flex items-center my-6">
+        <hr className="flex-grow border-gray-300" />
+        <span className="mx-4 text-gray-500">or</span>
+        <hr className="flex-grow border-gray-300" />
+      </div>
+
+      {/* Google Sign Up / Sign In Button */}
+      <button
+        onClick={() => signIn("google")}
+        className="w-full bg-red
