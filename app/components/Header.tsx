@@ -27,11 +27,11 @@ export default function Header() {
             className="btn btn-ghost text-xl gap-2 normal-case font-bold"
             prefetch={true}
             onClick={() =>
-              showNotification("Welcome to ImageKit ReelsPro", "info")
+              showNotification("Welcome to ReelsVerse", "info")
             }
           >
             <Home className="w-5 h-5" />
-            ImageKit ReelsPro
+            ReelVerse
           </Link>
         </div>
         <div className="flex flex-1 justify-end px-2">
